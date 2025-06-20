@@ -9,4 +9,9 @@
         <!-- Пустой changeSet -->
     </changeSet>
 
+    <include file="db/changelog/001-create-courses.xml"/>
+    <include file="db/changelog/002-create-chapters.xml"/>
+    <include file="db/changelog/003-create-lessons.xml"/>
+    <include file="db/changelog/004-insert-initial-data.xml"/>
+
 </databaseChangeLog>

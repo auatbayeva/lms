@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.18.xsd">
+
+    <changeSet id="001-create-courses-table" author="aibanu">
+        <createTable tableName="courses">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="TEXT"/>
+            <column name="created_time" type="TIMESTAMP"/>
+            <column name="updated_time" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="002-insert-sample-courses" author="aibanu">
+        <insert tableName="courses">
+            <column name="name" value="Java Backend Developer"/>
+            <column name="description" value="Практический курс по Java, Spring Boot, REST API, Hibernate и Docker"/>
+            <column name="created_time" valueDate="2025-06-18T00:00:00"/>
+            <column name="updated_time" valueDate="2025-06-20T00:00:00"/>
+        </insert>
+
+        <insert tableName="courses">
+            <column name="name" value="Frontend Developer"/>
+            <column name="description" value="Изучение HTML, CSS, JavaScript, React с практическими проектами"/>
+            <column name="created_time" valueDate="2025-06-12T00:00:00"/>
+            <column name="updated_time" valueDate="2025-06-14T00:00:00"/>
+        </insert>
+
+        <insert tableName="courses">
+            <column name="name" value="Data Analyst"/>
+            <column name="description" value="Работа с Excel, SQL, Power BI и визуализацией данных для аналитики"/>
+            <column name="created_time" valueDate="2025-05-08T00:00:00"/>
+            <column name="updated_time" valueDate="2025-05-10T00:00:00"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

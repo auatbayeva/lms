@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="004-insert-initial-data" author="aibanu">
+
+        <!-- CHAPTERS -->
+        <insert tableName="chapters">
+            <column name="id" value="1"/>
+            <column name="course_id" value="1"/>
+            <column name="name" value="Java Basics"/>
+            <column name="description" value="Introduction to Java, variables, and data types"/>
+            <column name="created_time" valueComputed="NOW()"/>
+            <column name="updated_time" valueComputed="NOW()"/>
+        </insert>
+
+        <insert tableName="chapters">
+            <column name="id" value="2"/>
+            <column name="course_id" value="1"/>
+            <column name="name" value="Object-Oriented Programming"/>
+            <column name="description" value="Classes, objects, inheritance, and polymorphism"/>
+            <column name="created_time" valueComputed="NOW()"/>
+            <column name="updated_time" valueComputed="NOW()"/>
+        </insert>
+
+        <insert tableName="chapters">
+            <column name="id" value="3"/>
+            <column name="course_id" value="1"/>
+            <column name="name" value="Spring Framework"/>
+            <column name="description" value="Dependency Injection, MVC, and REST APIs"/>
+            <column name="created_time" valueComputed="NOW()"/>
+            <column name="updated_time" valueComputed="NOW()"/>
+        </insert>
+
+        <!-- LESSONS -->
+        <insert tableName="lessons">
+            <column name="id" value="1"/>
+            <column name="chapter_id" value="1"/>
+            <column name="name" value="Variables and Data Types"/>
+            <column name="description" value="Understanding different data types in Java"/>
+            <column name="content" value="https://example.com/java-variables"/>
+            <column name="created_time" valueComputed="NOW()"/>
+            <column name="updated_time" valueComputed="NOW()"/>
+        </insert>
+
+        <insert tableName="lessons">
+            <column name="id" value="2"/>
+            <column name="chapter_id" value="2"/>
+            <column name="name" value="Inheritance Explained"/>
+            <column name="description" value="How inheritance works in Java OOP"/>
+            <column name="content" value="https://example.com/oop-inheritance"/>
+            <column name="created_time" valueComputed="NOW()"/>
+            <column name="updated_time" valueComputed="NOW()"/>
+        </insert>
+
+        <insert tableName="lessons">
+            <column name="id" value="3"/>
+            <column name="chapter_id" value="3"/>
+            <column name="name" value="Intro to Spring Boot"/>
+            <column name="description" value="Setting up a Spring Boot application"/>
+            <column name="content" value="https://example.com/spring-boot-intro"/>
+            <column name="created_time" valueComputed="NOW()"/>
+            <column name="updated_time" valueComputed="NOW()"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

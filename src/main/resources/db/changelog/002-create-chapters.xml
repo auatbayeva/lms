@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="2" author="aibanu">
+        <createTable tableName="chapters">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="TEXT"/>
+            <column name="order" type="INT"/>
+            <column name="course_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_time" type="TIMESTAMP"/>
+            <column name="updated_time" type="TIMESTAMP"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                baseTableName="chapters"
+                baseColumnNames="course_id"
+                constraintName="fk_chapter_course"
+                referencedTableName="courses"
+                referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
