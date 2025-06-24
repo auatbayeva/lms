@@ -8,7 +8,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "courses")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Course {
@@ -24,6 +25,5 @@ public class Course {
 
     private LocalDateTime createdTime;
     private LocalDateTime updatedTime;
-
 
 }

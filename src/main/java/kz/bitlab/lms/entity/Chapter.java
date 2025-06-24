@@ -21,9 +21,9 @@ public class Chapter {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    private int order;
+    private Integer order;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_id")
     private Course course;
 
