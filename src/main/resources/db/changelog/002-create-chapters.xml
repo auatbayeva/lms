@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,7 +14,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="description" type="TEXT"/>
-            <column name="order" type="INT"/>
+            <column name="chapter_order" type="INT"/>
             <column name="course_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
@@ -28,4 +29,5 @@
                 referencedTableName="courses"
                 referencedColumnNames="id"/>
     </changeSet>
+
 </databaseChangeLog>

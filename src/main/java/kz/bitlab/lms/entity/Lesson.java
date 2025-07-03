@@ -24,6 +24,7 @@ public class Lesson {
     @Column(columnDefinition = "TEXT")
     private String content;
 
+    @Column(name = "lesson_order")
     private Integer order;
 
     @ManyToOne(fetch = FetchType.LAZY)

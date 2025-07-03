@@ -8,9 +8,6 @@ COPY pom.xml .
 COPY .mvn .mvn
 COPY mvnw .
 
-# Прогоняем загрузку зависимостей
-RUN mvn dependency:go-offline
-
 # Затем копируем остальной код проекта
 COPY . .
 

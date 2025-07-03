@@ -13,7 +13,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="video_url" type="VARCHAR(512)"/>
-            <column name="order" type="INT"/>
+            <column name="lesson_order" type="INT"/>
             <column name="description" type="TEXT"/>
             <column name="content" type="TEXT"/>
             <column name="chapter_id" type="BIGINT">

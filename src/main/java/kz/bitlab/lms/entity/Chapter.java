@@ -21,6 +21,7 @@ public class Chapter {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column(name = "chapter_order")
     private Integer order;
 
     @ManyToOne(fetch = FetchType.LAZY)
